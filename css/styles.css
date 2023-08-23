@@ -1,0 +1,175 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Cyan-alfa: hsla(178, 100%, 50%, 0.6);
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--Very-dark-blue-main-BG);
+}
+
+.card {
+  width: 350px;
+  height: 600px;
+  margin: 148px auto 60px;
+  border-radius: 10px;
+  background-color: var(--Very-dark-blue-card-BG);
+  box-shadow: 1px -1px 11px 6px rgba(20, 37, 61, 0.41);
+  -webkit-box-shadow: 1px -1px 11px 6px rgba(20, 37, 61, 0.41);
+  -moz-box-shadow: 1px -1px 11px 6px rgba(20, 37, 61, 0.41);
+}
+
+.card__section {
+  padding: 20px;
+}
+
+.card__images {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  border-radius: 10px;
+  position: absolute;
+  background: var(--Cyan-alfa);
+  background-image: url(../images/icon-view.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card__images:hover .card__overlay {
+  transform: translateY(0%);
+}
+
+.card__title {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  color: var(--White);
+}
+
+.card__title:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.card__paragraph {
+  color: var(--Soft-blue);
+  font-weight: 300;
+}
+
+.card__Ethereum {
+  margin-top: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__platform {
+  display: flex;
+  gap: 6px;
+}
+
+.card__currency {
+  color: var(--Cyan);
+}
+
+.card__schedule {
+  color: var(--Soft-blue);
+}
+
+.card__line {
+  margin-top: 18px;
+  border: 1px solid var(--Very-dark-blue-line);
+}
+
+.card__creator {
+  margin-top: 15px;
+  font-weight: 300;
+  gap: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.card__creator-img {
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+
+.card__data {
+  color: var(--Soft-blue);
+}
+
+.card__name {
+  color: var(--White);
+}
+
+.card__name:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: var(--Soft-blue);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
